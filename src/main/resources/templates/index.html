@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dummy Shop</title>
+</head>
+<body>
+<h1>Dummy Shop</h1>
+<table>
+    <thead>
+    <tr>
+        <th colspan="4">Catalog</th>
+    </tr>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="product: ${products}">
+            <td th:text="${product.productId}"></td>
+            <td th:text="${product.name}"></td>
+            <td th:text="${product.description}"></td>
+            <td th:text="${product.price}"></td>
+        </tr>
+    </tbody>
+</table>
+<table>
+    <thead>
+    <tr>
+        <th colspan="3">News</th>
+    </tr>
+    <tr>
+        <th>ID</th>
+        <th>Label</th>
+        <th>Timestamp</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="n: ${news}">
+        <td th:text="${n.id}"></td>
+        <td th:text="${n.label}"></td>
+        <td th:text="${n.timestamp}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
