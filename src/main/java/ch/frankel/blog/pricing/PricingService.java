@@ -16,9 +16,10 @@ public class PricingService {
         this.repository = repository;
     }
 
-    public List<Pricing> getPrice(List<Long> productIds) {
+    public List<PricingDTO> getPrice(List<Long> productIds) {
         return productIds.stream()
                 .map(repository::findByProductId)
+                .map(pricing -> new PricingDTO(pricing.getProductId(), pricing.getPrice()))
                 .collect(Collectors.toList());
     }
 }

@@ -3,6 +3,7 @@ package ch.frankel.blog.home;
 import ch.frankel.blog.catalog.Product;
 import ch.frankel.blog.catalog.ProductRepository;
 import ch.frankel.blog.news.NewsRepository;
+import ch.frankel.blog.pricing.PricingDTO;
 import ch.frankel.blog.pricing.internal.Pricing;
 import ch.frankel.blog.pricing.PricingService;
 import org.springframework.stereotype.Controller;
@@ -25,10 +26,10 @@ public class HomeController {
         this.newsRepository = newsRepository;
     }
 
-    private static PricedProduct toPricedProduct(List<Product> products, List<Pricing> pricings, int i) {
+    private static PricedProduct toPricedProduct(List<Product> products, List<PricingDTO> pricings, int i) {
         var product = products.get(i);
         var pricing = pricings.get(i);
-        return new PricedProduct(product.getId(), product.getName(), product.getDescription(), pricing.getPrice());
+        return new PricedProduct(product.getId(), product.getName(), product.getDescription(), pricing.price());
     }
 
     @GetMapping("/")
