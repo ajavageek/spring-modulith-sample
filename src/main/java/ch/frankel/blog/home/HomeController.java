@@ -3,7 +3,7 @@ package ch.frankel.blog.home;
 import ch.frankel.blog.catalog.Product;
 import ch.frankel.blog.catalog.ProductRepository;
 import ch.frankel.blog.news.NewsRepository;
-import ch.frankel.blog.pricing.Pricing;
+import ch.frankel.blog.pricing.internal.Pricing;
 import ch.frankel.blog.pricing.PricingService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

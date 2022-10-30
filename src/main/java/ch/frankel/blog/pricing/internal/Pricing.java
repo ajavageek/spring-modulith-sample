@@ -1,4 +1,4 @@
-package ch.frankel.blog.pricing;
+package ch.frankel.blog.pricing.internal;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

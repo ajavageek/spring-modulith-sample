@@ -1,6 +1,5 @@
-package ch.frankel.blog.pricing;
+package ch.frankel.blog.pricing.internal;
 
-import ch.frankel.blog.news.News;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PricingRepository extends JpaRepository<Pricing, Long> {

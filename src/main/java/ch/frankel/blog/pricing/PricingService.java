@@ -1,5 +1,7 @@
 package ch.frankel.blog.pricing;
 
+import ch.frankel.blog.pricing.internal.Pricing;
+import ch.frankel.blog.pricing.internal.PricingRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
