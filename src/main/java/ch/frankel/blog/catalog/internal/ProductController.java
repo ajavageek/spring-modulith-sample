@@ -1,4 +1,4 @@
-package ch.frankel.blog.news;
+package ch.frankel.blog.catalog.internal;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -6,16 +6,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class NewsController {
+public class ProductController {
 
-    private final NewsRepository repository;
+    private final ProductRepository repository;
 
-    public NewsController(NewsRepository repository) {
+    public ProductController(ProductRepository repository) {
         this.repository = repository;
     }
 
-    @GetMapping("/news")
-    public List<News> getAll() {
+    @GetMapping("/catalog")
+    public List<Product> getAll() {
         return repository.findAll();
     }
 }

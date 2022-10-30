@@ -1,4 +1,4 @@
-package ch.frankel.blog.news;
+package ch.frankel.blog.news.internal;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

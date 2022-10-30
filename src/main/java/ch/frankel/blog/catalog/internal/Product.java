@@ -1,4 +1,4 @@
-package ch.frankel.blog.catalog;
+package ch.frankel.blog.catalog.internal;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

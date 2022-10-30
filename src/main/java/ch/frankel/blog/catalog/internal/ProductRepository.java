@@ -1,4 +1,4 @@
-package ch.frankel.blog.catalog;
+package ch.frankel.blog.catalog.internal;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
